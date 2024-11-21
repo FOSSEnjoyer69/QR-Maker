@@ -1,1 +1,1 @@
-Simple and fast QR Code reder and writer
+Simple and fast QR Code reader and writer
