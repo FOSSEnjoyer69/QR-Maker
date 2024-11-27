@@ -9,8 +9,8 @@ with gr.Blocks(title="QR Maker") as ui:
             with gr.Row():
                 get_qr_code_value_btn = gr.Button("Get Value")
                 set_qr_code_value_btn = gr.Button("Set Value")
-    
+            logo = gr.Image(label="Logo")
     get_qr_code_value_btn.click(decode_image, inputs=[qr_code_image], outputs=[qr_value])
-    set_qr_code_value_btn.click(encode_image, inputs=[qr_value], outputs=[qr_code_image])
+    set_qr_code_value_btn.click(encode_image, inputs=[qr_value, logo], outputs=[qr_code_image])
 
 ui.launch()
